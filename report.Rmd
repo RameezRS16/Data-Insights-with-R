@@ -1,3 +1,4 @@
+
 ---
 title: "Data Insights with R - Final Report"
 author: "Your Name"
@@ -13,3 +14,18 @@ This report summarizes the entire data analysis pipeline, including data explora
 library(ggplot2)
 dataset <- read.csv("data/secured_dataset.csv")
 summary(dataset)
+
+ ggplot(dataset, aes(x = dataset$feature1, y = dataset$feature2)) + 
+  geom_point() + 
+  theme_minimal()
+
+performance_metrics <- read.csv("results/performance_metrics.csv")
+knitr::kable(performance_metrics)
+
+
+bias_report <- read.csv("results/bias_report.csv")
+knitr::kable(bias_report)
+
+
+
+
