@@ -1,0 +1,15 @@
+---
+title: "Data Insights with R - Final Report"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Introduction  
+This report summarizes the entire data analysis pipeline, including data exploration, preprocessing, modeling, and results.
+
+# Data Exploration  
+```{r}
+library(ggplot2)
+dataset <- read.csv("data/secured_dataset.csv")
+summary(dataset)
